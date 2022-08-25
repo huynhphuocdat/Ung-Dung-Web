@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 03</title>
+    <script src="JS/js03.js"></script>
+    <style>
+        table, td{
+            border: 1px solid #000;
+            border-collapse: collapse;
+            background-color: beige;
+        }
+
+        table{
+            margin: 0px auto;
+        }
+        td:nth-of-type(odd)
+        {
+            width: 50px;
+        }
+        td:nth-of-type(even)
+        {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption><b>CHƯƠNG TRÌNH GIẢI PHƯƠNG TRÌNH BẬC 2 <br>ax<sup>2</sup> + bx + c = </b></caption>
+        <tr>
+            <td>a = </td>
+            <td><input type="text" id="a" size="10"></td>
+        </tr>
+        <tr>
+            <td>b = </td>
+            <td><input type="text" id="b" size="10"></td>
+        </tr>
+        <tr>
+            <td>c = </td>
+            <td><input type="text" id="c" size="10"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button id="btGiai" onclick="PTB2()">Giải</button>
+                <button id="btXoa" onclick="xoa()">Xóa</button>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2"><span id="ketqua"></span></th>
+        </tr>
+    </table>
+    <br><b><a href="javascript.html">QUAY LẠI</a></b><br>
+</body>
+</html>

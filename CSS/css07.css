@@ -1,0 +1,133 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.banner{
+    height: 120px;
+    background-image: url(../Images/javascript.jpg);
+    font-size: 2.5em;
+    font-weight: bold;
+    color: yellow;
+    text-align: center;
+    text-shadow: 5px 5px 3px red;
+    line-height: 120px;
+}
+
+.nav{
+    height: 38px;
+    background-color: rgb(2, 105, 2);
+    line-height: 36px;
+    text-align: center;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+.left, .right{
+    width: 15%;
+    min-height: 650px;
+    background-color: rgb(73, 218, 205);
+}
+
+
+.content{
+    width: 70%;
+    min-height: 650px;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+}
+
+.content>div{
+    display: flex;
+    flex-direction: row;
+}
+
+.content>div>div{
+    height: 320px;
+    width: 50%;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 20px;
+    text-align: justify;
+    line-height: 30px;
+    overflow: auto;
+}
+
+.footer{
+    height: 25px;
+    background-color: blue;
+    color: yellow;
+    text-align: center;
+    padding: 15px;
+}
+
+.container ul{
+    list-style: none;
+    margin: 20px 0 20px 20px;
+}
+
+.title{
+    text-align: center;
+    border: 1px solid black;
+    background-color: blue;
+    color: white;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.right>div{
+    border: 1px solid black;
+    width: 80%;
+    height: 150px;
+    border-radius: 25px;
+    box-shadow: 5px 5px gray;
+    margin: 60px 0 0 30px;
+    text-align: center;
+    line-height: 150px;
+}
+
+
+li{
+    list-style-type: none;
+}
+
+
+.menu li{
+    display: inline-block;
+    width: 120px;
+    border:  1px dotted gray;
+    background-color: aquamarine;
+    position: relative;
+    border-radius: 8px;
+}
+
+.menu li:hover .submenu{
+    display: block;
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+}
+
+.menu a{
+    text-decoration: none;
+    color: rgb(197, 13, 13);
+}
+
+.menu a:hover{
+    color: red;
+    font-weight: 700;
+}

@@ -1,0 +1,75 @@
+.banner{
+    height: 150px;
+    border: 2px solid red;
+    text-align: center;
+    line-height: 150px;
+    font-weight: bolder;
+    animation: banner 5s linear, infinite;
+}
+
+
+body>div:last-child{
+    width: 60%;
+    margin: 0px auto;
+}
+
+body>div div{
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    border: 1px solid red;
+    float: left;
+}
+
+@keyframes banner{
+    0%{ background-color: yellow; font-size: 1em;}
+    0%{ background-color: cyan; font-size: 1.5em;}
+    0%{ background-color: yellow; font-size: 2em;}
+    0%{ background-color: green; font-size: 2.5em;}
+    0%{ background-color: magenta; font-size: 3em;}
+    0%{ background-color: blue; font-size: 3.5em;}
+}
+
+
+@keyframes slider{
+    0%{ background-image: url(../Images/bando.jpg)}
+    0%{ background-color: url(../Images/css.jpg)}
+    0%{ background-color: url(../Images/html.jpg)}
+    0%{ background-color: url(../Images/html.jpg)}
+    0%{ background-color: url(../Images/bando.jpg)}
+    0%{ background-color: url(../Images/jQuery.jpg)}
+}
+
+@keyframes rotate{
+    0%{ transform: rotate(60deg);}
+    20%{ transform: rotate(120deg);}
+    40%{ transform: rotate(180deg);}
+    60%{ transform: rotate(240deg);}
+    80%{ transform: rotate(300deg);}
+    100%{ transform: rotate(360deg);}
+}
+
+
+.div1{
+    background-image: url(../Images/html.jpg);
+    animation: slider 10s linear, infinite;
+}
+
+.div4{
+    text-align: center;
+    line-height: 200px;
+    font-size: 2em;
+    animation: rotate 10s linear, infinite;
+}
+
+.div2{
+    border: 2px dashed blue;
+    border-radius: 0px 20px;
+    background-color: antiquewhite;
+}
+
+.div3{
+    border: 2px dotted blue;
+    border-radius: 20px 0px;
+    background-color: antiquewhite;
+}

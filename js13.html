@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js 13</title>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+</head>
+<body>
+    <p>
+        <label for="data">Nhập các giá trị:</label>
+        <input type="text" required id="inputData" value="20,50,70,80,40">
+        <button onclick="drawChart()">Draw chart</button>
+    </p>
+    <canvas id="chart"></canvas>
+    <br><b><a href="javascript.html">QUAY LẠI</a></b><br>
+    <script>
+        function drawChart()
+        {
+            var x = document.getElementById("inputData").value.split(",");
+            var y = [];
+            for (i = 0; i < x.length; i++)
+                y[i] = Number(x[i]);
+            var barColors = [];
+            for (i = 0; i < x.length; i++)
+                barColors[i] = "rgb(" + Math.floor(Math.random() * 300) % 256
+                + "," + Math.floor(Math.random() * 300) % 256
+                + "," + Math.floor(Math.random() * 300) % 256 + ")";
+            new Chart("chart",
+            {
+                type: "pie",
+                data:
+                {
+                    labels: x,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: y
+                    }]
+                },
+                options:
+                {
+                    title: 
+                    {
+                        display: true,
+                        text: "Pie chart"
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 12</title>
+</head>
+<body onload="draw()">
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <script>
+        function draw(){
+            var canvas = document.getElementById('canvas');
+            var ctx = canvas.getContext('2d');//tạothiết bị ngữ cảnh
+            //retangle
+            ctx.fillStyle = "rgb(0,225,225)"; //màu tô
+            ctx.fillRect(0,0,400,400);//gọi hàm tô màu
+            //fill circle
+            ctx.beginPath();
+            ctx.arc(200,200,200,0,2*Math.PI);
+            ctx.strokeStyle = "black";
+             var color = ctx.createLinearGradient(0, 0, 0, 200);
+            color.addColorStop(0, "red");
+            color.addColorStop(0.5, "white");
+            color.addColorStop(1, "red");
+            ctx.fillStyle = color;
+            ctx.fill();
+            ctx.stroke();
+        
+            //polygon
+            ctx.beginPath();
+           ctx.moveTo(200,0);
+            ctx.lineTo(400, 200);
+            ctx.lineTo(200, 400);
+            ctx.lineTo(0, 200);
+            ctx.lineTo(200, 0);
+            ctx.strokeStyle = "red";
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+            ctx.stroke();
+            //
+            ctx.beginPath();
+            ctx.font = "80px Arial";
+            ctx.lineWidth = 5; //độ dày của stroke  
+            ctx.strokeStyle = "blue"; //màu stroke
+            ctx.strokeText("HTML5", canvas.width / 5, canvas.height / 2 +  20);
+
+        }
+    </script>
+    <br><b><a href="javascript.html">QUAY LẠI</a></b><br>
+</body>
+</html>

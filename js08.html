@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 08</title>
+
+    <script>
+        function Statistic(){
+            var s  =  document.getElementById("txtS").value;
+            var arr =  s.split(" "); //tach để đếm số từ
+            var i, words = 0;
+            var arrKq = []; // mảng chứa kết quả
+            for(i = 0; i<=128; i++)
+            {
+                arrKq[i] = 0;
+            }
+            //đêms số từ
+            for( i = 0; i < arr.length; i++){
+                if(arr[i].trim() != "")
+                    words++;
+
+            }
+            var kq = "Characters: " + s.length + "<br>" + "Words: " + words + "<br>";
+            for(i = 0; i < s.length; i++){
+                if(s.charCodeAt(i) >= 'a' && s.charCodeAt(i) <= 'z') //a - z
+                    arrKq[s.charCodeAt(i) - 32]++;
+                else //các lí tự khác
+                    arrKq[s.charCodeAt(i)]++;
+            }
+            //duyệt mảng arrKQ in số liệu thống kê
+            for( i = 0; i< arrKq.length; i++)
+            {
+                if(arrKq[i]> 0)
+                    kq += "Characters ' " + String.fromCharCode(i) + " ': " + arrKq[i] + "<br>";
+
+            }
+            document.getElementById("kq").innerHTML = kq;
+                
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <caption><h2>String statistic</h2></caption>
+        <tr>
+            <td>String: </td>
+            <td><input type="text" id="txtS" size="50" value="Hello, how are you? 11123425"></td>
+    
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="Statistic()">Statistic</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <p id = "kq"></p>
+            </td>
+        </tr>
+    </table>
+    <b><a href="javascript.html">QUAY LẠI</a></b><br>
+</body>
+</html>
